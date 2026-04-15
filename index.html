@@ -45,7 +45,9 @@ nav.scrolled{background:rgba(8,8,8,.82);backdrop-filter:blur(18px)}
 
 /* ── HERO ────────────────────────────────────────────────────── */
 #hero{position:relative;height:100vh;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;padding-bottom:80px}
-.hero-bg{position:absolute;inset:-10%;will-change:transform;background:url('https://images.unsplash.com/photo-1540541338537-1e08a12cdae2?w=1920&q=90') center/cover no-repeat;filter:brightness(.45)}
+.hero-video-wrap{position:absolute;inset:0;overflow:hidden}
+.hero-video-wrap video{width:100%;height:100%;object-fit:cover;filter:brightness(.48)}
+.hero-bg{position:absolute;inset:-10%;will-change:transform;background:url('images/Rare Builders 200 Oakwood (47).jpg') center/cover no-repeat;filter:brightness(.45)}
 .hero-bg[data-bg-url]{cursor:pointer}
 .hero-vignette{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.95) 0%,rgba(8,8,8,.2) 40%,transparent 70%)}
 .hero-content{position:relative;z-index:2;text-align:center;max-width:1100px;padding:0 32px}
@@ -66,7 +68,7 @@ nav.scrolled{background:rgba(8,8,8,.82);backdrop-filter:blur(18px)}
 
 /* ── OBSESSION ───────────────────────────────────────────────── */
 #obsession{position:relative;padding:140px 48px;background:var(--black);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh}
-.obs-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=1920&q=80') center/cover no-repeat;opacity:.08;will-change:transform}
+.obs-bg{position:absolute;inset:0;background:url('images/1211 Munster St twilight (5).jpg') center/cover no-repeat;opacity:.08;will-change:transform}
 .obs-tagline{position:relative;z-index:2;text-align:center}
 .obs-word{
   display:block;
@@ -146,7 +148,7 @@ nav.scrolled{background:rgba(8,8,8,.82);backdrop-filter:blur(18px)}
 
 /* ── PHOTO BREAK ─────────────────────────────────────────────── */
 .photo-break{position:relative;height:70vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.pb-img{position:absolute;inset:-10%;background:url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1920&q=85') center/cover no-repeat;will-change:transform;filter:brightness(.35)}
+.pb-img{position:absolute;inset:-10%;background:url('images/715 Terrace Blvd (53).jpg') center/cover no-repeat;will-change:transform;filter:brightness(.35)}
 .pb-quote{position:relative;z-index:2;text-align:center;padding:0 48px;max-width:900px}
 .pb-quote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4.8vw,68px);font-style:italic;font-weight:300;line-height:1.18;color:var(--white)}
 .pb-quote blockquote em{color:var(--gold)}
@@ -192,7 +194,7 @@ nav.scrolled{background:rgba(8,8,8,.82);backdrop-filter:blur(18px)}
 
 /* ── BIG STAT ─────────────────────────────────────────────────── */
 #bighero{position:relative;height:90vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.bh-bg{position:absolute;inset:-10%;background:url('https://images.unsplash.com/photo-1577003833619-76bbd7f82948?w=1920&q=85') center/cover no-repeat;will-change:transform;filter:brightness(.25)}
+.bh-bg{position:absolute;inset:-10%;background:url('images/1211 Munster St twilight (5).jpg') center/cover no-repeat;will-change:transform;filter:brightness(.25)}
 .bh-content{position:relative;z-index:2;text-align:center;padding:0 32px}
 .bh-num{font-family:'Cormorant Garamond',serif;font-size:clamp(120px,22vw,300px);font-weight:300;color:var(--gold);line-height:.85;display:block}
 .bh-label{font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--white-dim);margin-top:16px}
@@ -340,7 +342,12 @@ body.edit-mode [contenteditable]:focus{outline:1px solid var(--gold);background:
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg" id="heroBg" data-bg-url="https://images.unsplash.com/photo-1540541338537-1e08a12cdae2?w=1920&q=90" style="background-image:url('https://images.unsplash.com/photo-1540541338537-1e08a12cdae2?w=1920&q=90')"></div>
+  <div class="hero-video-wrap">
+    <video autoplay muted loop playsinline poster="images/Rare Builders 200 Oakwood (47).jpg">
+      <source src="video/Hero Video - 200 Oakwood Way.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-bg" id="heroBg" style="display:none"></div>
   <div class="hero-vignette"></div>
   <div class="hero-content">
     <p class="hero-eyebrow" contenteditable="false">Luxury Aquatic Design</p>
@@ -410,9 +417,9 @@ body.edit-mode [contenteditable]:focus{outline:1px solid var(--gold);background:
 <div id="showcase-outer">
   <div id="showcase-sticky">
     <div class="sc-photo-col" id="scPhotoCol">
-      <div class="sc-img active" id="scImg0" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1400&q=85')"></div>
-      <div class="sc-img" id="scImg1" style="background-image:url('https://images.unsplash.com/photo-1562778612-e1e0cda9915c?w=1400&q=85')"></div>
-      <div class="sc-img" id="scImg2" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=85')"></div>
+      <div class="sc-img active" id="scImg0" style="background-image:url('images/120 Spring Ln (4).jpg')"></div>
+      <div class="sc-img" id="scImg1" style="background-image:url('images/715 Terrace Blvd (48).jpg')"></div>
+      <div class="sc-img" id="scImg2" style="background-image:url('images/Rare Builders 100 E Rockwood Way (32).jpg')"></div>
     </div>
     <div class="sc-panels-col" id="scPanelsCol">
       <div class="sc-panel" data-img="0">
@@ -475,32 +482,32 @@ body.edit-mode [contenteditable]:focus{outline:1px solid var(--gold);background:
   <div class="port-grid">
     <div class="pf" data-img-target>
       <div class="pf-aspect"></div>
-      <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=900&q=85" alt="Infinity Pool">
+      <img src="images/205 E Rockwood Way (51).jpg" alt="Infinity Pool">
       <div class="pf-overlay"><p class="pf-cat" contenteditable="false">Infinity Edge</p><p class="pf-name" contenteditable="false">Hillside Infinity</p></div>
     </div>
     <div class="pf" data-img-target>
       <div class="pf-aspect"></div>
-      <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=900&q=85" alt="Geometric Pool">
+      <img src="images/120 Spring Ln (45).jpg" alt="Geometric Pool">
       <div class="pf-overlay"><p class="pf-cat" contenteditable="false">Geometric</p><p class="pf-name" contenteditable="false">The Slate Estate</p></div>
     </div>
     <div class="pf" data-img-target>
       <div class="pf-aspect"></div>
-      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85" alt="Spa Pool">
+      <img src="images/1211 Munster St twilight (3).jpg" alt="Spa Pool">
       <div class="pf-overlay"><p class="pf-cat" contenteditable="false">Spa &amp; Pool</p><p class="pf-name" contenteditable="false">Bel Air Retreat</p></div>
     </div>
     <div class="pf" data-img-target>
       <div class="pf-aspect"></div>
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=85" alt="Modern Pool">
+      <img src="images/150 Dana Way (62).jpg" alt="Modern Pool">
       <div class="pf-overlay"><p class="pf-cat" contenteditable="false">Modern</p><p class="pf-name" contenteditable="false">The Glass House</p></div>
     </div>
     <div class="pf" data-img-target>
       <div class="pf-aspect"></div>
-      <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=900&q=85" alt="Resort Pool">
+      <img src="images/705 Manor Rd (16).jpg" alt="Resort Pool">
       <div class="pf-overlay"><p class="pf-cat" contenteditable="false">Resort</p><p class="pf-name" contenteditable="false">Malibu Compound</p></div>
     </div>
     <div class="pf" data-img-target>
       <div class="pf-aspect"></div>
-      <img src="https://images.unsplash.com/photo-1540541338537-1e08a12cdae2?w=900&q=85" alt="Luxury Pool">
+      <img src="images/Rare Builders - (3).jpg" alt="Luxury Pool">
       <div class="pf-overlay"><p class="pf-cat" contenteditable="false">Luxury</p><p class="pf-name" contenteditable="false">Sunset Ridge</p></div>
     </div>
   </div>
@@ -510,7 +517,7 @@ body.edit-mode [contenteditable]:focus{outline:1px solid var(--gold);background:
 <section id="features">
   <div class="feat-row">
     <div class="feat-photo-wrap">
-      <img class="feat-img" id="fi0" src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1400&q=85" alt="Design">
+      <img class="feat-img" id="fi0" src="images/120 Spring Ln (46).jpg" alt="Design">
     </div>
     <div class="feat-copy">
       <div class="feat-copy-inner">
@@ -529,7 +536,7 @@ body.edit-mode [contenteditable]:focus{outline:1px solid var(--gold);background:
   </div>
   <div class="feat-row">
     <div class="feat-photo-wrap">
-      <img class="feat-img" id="fi1" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1400&q=85" alt="Technology">
+      <img class="feat-img" id="fi1" src="images/150 Dana Way (82).jpg" alt="Technology">
     </div>
     <div class="feat-copy">
       <div class="feat-copy-inner">
@@ -548,7 +555,7 @@ body.edit-mode [contenteditable]:focus{outline:1px solid var(--gold);background:
   </div>
   <div class="feat-row">
     <div class="feat-photo-wrap">
-      <img class="feat-img" id="fi2" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1400&q=85" alt="Service">
+      <img class="feat-img" id="fi2" src="images/1211 Munster St twilight (5).jpg" alt="Service">
     </div>
     <div class="feat-copy">
       <div class="feat-copy-inner">
